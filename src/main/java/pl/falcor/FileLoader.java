@@ -17,8 +17,9 @@ class FileLoader {
     HashMap<String, Integer> readFromFile() {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String currentLine = reader.readLine().toLowerCase();
+            String currentLine = reader.readLine();
             while (currentLine != null) {
+                currentLine = currentLine.toLowerCase();
                 String[] wordsArray = currentLine.replaceAll("[^a-zA-Z ]", "").split("\\s+");
                 for (String s : wordsArray) {
                     if (wordsMap.containsKey(s)) {
