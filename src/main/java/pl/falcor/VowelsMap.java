@@ -14,9 +14,9 @@ class VowelsMap {
     }
 
     HashMap<VowelsWithLength, VowelsStats> createVowelsMap() {
+        int counter = 0;
         for (String word : wordsMap.keySet()) {
             HashSet<Character> vowelsInWord = new HashSet<>();
-            int counter = 0;
             for (int i = 0; i < word.length(); i++) {
                 if (VowelsSet.VOWELS_SET.contains(word.charAt(i))) {
                     vowelsInWord.add(word.charAt(i));

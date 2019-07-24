@@ -13,11 +13,11 @@ class VowelsWithLength {
         this.wordLength = wordLength;
     }
 
-    public HashSet<Character> getVowelsSet() {
+    HashSet<Character> getVowelsSet() {
         return vowelsSet;
     }
 
-    public Integer getWordLength() {
+     Integer getWordLength() {
         return wordLength;
     }
 
