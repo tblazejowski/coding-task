@@ -1,6 +1,7 @@
 package pl.falcor;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 class VowelsWithLength {
 
@@ -22,6 +23,20 @@ class VowelsWithLength {
 
     @Override
     public String toString() {
-        return vowelsSet + " " + wordLength;
+        return "(" + vowelsSet + ", " + wordLength + ")";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VowelsWithLength that = (VowelsWithLength) o;
+        return Objects.equals(getVowelsSet(), that.getVowelsSet()) &&
+                Objects.equals(getWordLength(), that.getWordLength());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getVowelsSet(), getWordLength());
     }
 }

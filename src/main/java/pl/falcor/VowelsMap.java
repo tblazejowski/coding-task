@@ -21,7 +21,11 @@ class VowelsMap {
                 }
             }
             VowelsWithLength vowelsWithLength = new VowelsWithLength(vowelsInWord, word.length());
-            vowelsMap.put(vowelsWithLength, 1);
+            if (vowelsMap.containsKey(vowelsWithLength)) {
+                vowelsMap.put(vowelsWithLength, vowelsMap.get(vowelsWithLength) + 1);
+            } else {
+                vowelsMap.put(vowelsWithLength, 1);
+            }
         }
         return vowelsMap;
     }
