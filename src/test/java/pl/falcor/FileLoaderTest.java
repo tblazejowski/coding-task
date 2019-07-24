@@ -3,6 +3,7 @@ package pl.falcor;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pl.falcor.io.FileLoader;
 
 import java.util.HashMap;
 

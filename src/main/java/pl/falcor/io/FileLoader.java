@@ -1,20 +1,20 @@
-package pl.falcor;
+package pl.falcor.io;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
-class FileLoader {
+public class FileLoader {
 
     private final String file;
     private HashMap<String, Integer> wordsMap = new HashMap<>();
 
-    FileLoader(String file) {
+    public FileLoader(String file) {
         this.file = file;
     }
 
-    HashMap<String, Integer> readFromFile() {
+    public HashMap<String, Integer> readFromFile() {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String currentLine = reader.readLine();

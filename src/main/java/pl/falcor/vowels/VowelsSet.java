@@ -1,4 +1,4 @@
-package pl.falcor;
+package pl.falcor.vowels;
 
 import java.util.Arrays;
 import java.util.HashSet;

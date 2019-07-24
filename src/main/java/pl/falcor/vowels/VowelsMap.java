@@ -1,20 +1,20 @@
-package pl.falcor;
+package pl.falcor.vowels;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.HashSet;
 
-class VowelsMap {
+public class VowelsMap {
 
     private HashMap<String, Integer> wordsMap;
     private HashMap<VowelsWithLength, VowelsStats> vowelsMap = new HashMap<>();
 
-    VowelsMap(HashMap<String, Integer> wordsMap) {
+    public VowelsMap(HashMap<String, Integer> wordsMap) {
         this.wordsMap = wordsMap;
     }
 
-    HashMap<VowelsWithLength, VowelsStats> getStats() {
+    public HashMap<VowelsWithLength, VowelsStats> getStats() {
         int counter = 0;
         for (String word : wordsMap.keySet()) {
             HashSet<Character> vowelsInWord = new HashSet<>();

@@ -1,5 +1,9 @@
 package pl.falcor;
 
+import pl.falcor.io.FileLoader;
+import pl.falcor.io.ResultWriter;
+import pl.falcor.vowels.VowelsMap;
+
 class App {
     public static void main(String[] args) {
         if (args.length != 1) {
