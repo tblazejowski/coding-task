@@ -1,6 +1,7 @@
 package pl.falcor;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -13,7 +14,7 @@ class VowelsMap {
         this.wordsMap = wordsMap;
     }
 
-    HashMap<VowelsWithLength, VowelsStats> createVowelsMap() {
+    HashMap<VowelsWithLength, VowelsStats> getStats() {
         int counter = 0;
         for (String word : wordsMap.keySet()) {
             HashSet<Character> vowelsInWord = new HashSet<>();
@@ -28,7 +29,9 @@ class VowelsMap {
                 vowelsMap.get(vowelsWithLength).increaseOccurrence();
                 vowelsMap.get(vowelsWithLength).setSum(counter);
             } else {
-                vowelsMap.put(vowelsWithLength, new VowelsStats(new BigDecimal(1), new BigDecimal(counter)));
+                vowelsMap.put(vowelsWithLength, new VowelsStats(
+                        new BigDecimal(1).setScale(4, RoundingMode.HALF_EVEN),
+                        new BigDecimal(counter).setScale(4, RoundingMode.HALF_EVEN)));
             }
             counter = 0;
         }

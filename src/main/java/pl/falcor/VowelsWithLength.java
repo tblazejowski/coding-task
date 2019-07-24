@@ -17,7 +17,7 @@ class VowelsWithLength {
         return vowelsSet;
     }
 
-     Integer getWordLength() {
+    Integer getWordLength() {
         return wordLength;
     }
 

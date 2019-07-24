@@ -1,8 +1,9 @@
 package pl.falcor;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
-public class VowelsStats {
+class VowelsStats {
 
     private BigDecimal occurrence;
     private BigDecimal sum;
